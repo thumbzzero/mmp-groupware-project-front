@@ -25,7 +25,7 @@
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https:/astounding-sopapillas-826b69/.netlify.com",
+  "homepage": ".",
   "eslintConfig": {
     "extends": [
       "react-app",
