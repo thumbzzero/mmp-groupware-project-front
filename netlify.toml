@@ -1,5 +1,6 @@
 [build]	
     build = "build"
+		command = "CI = yarn build"
 
 [build.environment]	
     NODE_ENV = "development"	
