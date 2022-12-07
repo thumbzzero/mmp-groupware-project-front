@@ -26,7 +26,7 @@
     "deploy": "gh-pages -d build",
     "netlify": "netlify"
   },
-  "homepage": ".",
+  "homepage": "./",
   "eslintConfig": {
     "extends": [
       "react-app",
