@@ -1,0 +1,38 @@
+.sideMenuContainer {
+	/* width: 350px; */
+	width: 25%;
+	margin-right: 50px;
+	text-align: center;
+	background-color: #ededed;
+	/* background-color: #e6f4fa; */
+	/* border: 1px solid #bbb;
+	border-radius: 7px; */
+}
+
+.sideMainMenu {
+	/* border: solid 1px #bfcfff; */
+	font-size: 25px;
+	margin-top: 11px;
+	margin-bottom: 11px;
+}
+
+.sideMainMenu :hover {
+	/* background-color: #acbae5;
+	color: white; */
+	color: #3928c0;
+	font-weight: bold;
+}
+
+.sideSubMenu {
+	height: 25px;
+}
+
+.sideSubMenu :hover {
+	/* background-color: #acbae5;
+	color: white; */
+	color: #acbae5;
+}
+
+.clickedMenu {
+	font-weight: bold;
+}
