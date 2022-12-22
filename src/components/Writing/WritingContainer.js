@@ -25,6 +25,7 @@ const WritingContainer = ({ menuType }) => {
         method: "get",
         url: baseUrl + "/apprform/list",
       }).then((response) => {
+        console.log(response.data)
         response.data.map((res) =>
           setAfType((type) => type.concat({ id: res.afNo, value: res.afNm }))
         );
@@ -33,7 +34,7 @@ const WritingContainer = ({ menuType }) => {
   }, [menuType]);
   const onWriting = (e) => {
     e.preventDefault();
-
+    console.log(afType)
     const enteredTitle = titleRef.current.value;
     const enteredContent = contentRef.current.value;
     const enteredFile = fileRef.current.files[0];
