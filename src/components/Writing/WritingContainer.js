@@ -25,16 +25,16 @@ const WritingContainer = ({ menuType }) => {
         method: "get",
         url: baseUrl + "/apprform/list",
       }).then((response) => {
-        console.log(response.data)
+        let types = [];
         response.data.map((res) =>
-          setAfType((type) => type.concat({ id: res.afNo, value: res.afNm }))
+          //setAfType((type) => type.concat({ id: res.afNo, value: res.afNm }))
+          types.push({ id: res.afNo, value: res.afNm })
         );
+        setAfType(types);
       });
     }
   }, [menuType]);
-  useEffect(() => {
-    console.log(afType)
-  }, [afType])
+
   const onWriting = (e) => {
     e.preventDefault();
     
