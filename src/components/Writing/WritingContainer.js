@@ -32,9 +32,12 @@ const WritingContainer = ({ menuType }) => {
       });
     }
   }, [menuType]);
+  useEffect(() => {
+    console.log(afType)
+  }, [afType])
   const onWriting = (e) => {
     e.preventDefault();
-    console.log(afType)
+    
     const enteredTitle = titleRef.current.value;
     const enteredContent = contentRef.current.value;
     const enteredFile = fileRef.current.files[0];
@@ -68,7 +71,7 @@ const WritingContainer = ({ menuType }) => {
           new Blob([JSON.stringify(postData)], { type: "application/json" })
         );
     formData.append("files", enteredFile);
-    console.log(formData.get("files"));
+    //console.log(formData.get("files"));
     axios({
       method: "post",
       url: url,
