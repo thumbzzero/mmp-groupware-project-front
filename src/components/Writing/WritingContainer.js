@@ -18,7 +18,7 @@ const WritingContainer = ({ menuType }) => {
   const [afType, setAfType] = useState([]);
   const [enteredType, setEnteredType] = useState();
 
-  useDidMountEffect(() => {
+  useEffect(() => {
     setAfType([]);
     if (menuType !== "업무일지") {
       axios({
