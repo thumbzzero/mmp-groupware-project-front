@@ -68,7 +68,26 @@ const BusinesslogDetail = () => {
       const blob = new Blob([response.data]);
       const newFile = new File([blob], fileDetail.atcOriName);
       setFile(newFile);
+      const downloadUrl = window.URL.createObjectURL(blob);
 
+      const link = document.createElement("a");
+      link.href = downloadUrl;
+      link.style.display = "none";
+
+      const injectFilename = (res) => {
+        const disposition = res.headers["content-disposition"];
+
+        const fileName = fileDetail.atcOriName;
+
+        return fileName;
+      };
+
+      link.download = injectFilename(response);
+
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.URL.revokeObjectURL(fileUrl);
       //const fileUrl = window.URL.createObjectURL(response.data);
       /*    const downloadUrl = window.URL.createObjectURL(blob);
 
