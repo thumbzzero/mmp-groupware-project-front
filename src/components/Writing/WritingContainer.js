@@ -37,7 +37,7 @@ const WritingContainer = ({ menuType }) => {
 
   const onWriting = (e) => {
     e.preventDefault();
-    
+
     const enteredTitle = titleRef.current.value;
     const enteredContent = contentRef.current.value;
     const enteredFile = fileRef.current.files[0];
@@ -132,27 +132,16 @@ const WritingContainer = ({ menuType }) => {
               </td>
             </tr>
           </tbody>
-          <tbody>
-            <tr>
-              <td className={classes.writeType}>첨부파일</td>
-              <td>
-                <input
-                  className={classes.fileInput}
-                  type="file"
-                  ref={fileRef}
-                />
-              </td>
-            </tr>
-          </tbody>
           {menuType === "업무일지" ? null : (
             <tbody>
               <tr>
-                {/* <td>결재자명</td> */}
+                <td className={classes.writeType}>첨부파일</td>
                 <td>
-                  {/* <WritingDropdown
-                    dropdownList={apprTypes}
-                    setSelectedDropValue={setEnteredType}
-                  /> */}
+                  <input
+                    className={classes.fileInput}
+                    type="file"
+                    ref={fileRef}
+                  />
                 </td>
               </tr>
             </tbody>
